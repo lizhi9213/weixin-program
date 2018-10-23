@@ -1,0 +1,11 @@
+.tips_box {
+  margin-top: 200rpx;
+  text-align: center;
+  width: 100%;
+}
+
+.tips_box image {
+  display: block;
+  width: 70%;
+  margin: 0 auto;
+}

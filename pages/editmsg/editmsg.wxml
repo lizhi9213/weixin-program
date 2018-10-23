@@ -1,0 +1,75 @@
+<view class="container">
+  <import src="../../component/toastYh/toastYh.wxml" />
+  <template is="toast" data="{{ ..._toast_ }}" />
+  <form class='appeal-form' bindsubmit="formSubmit" bindreset="formReset" style="background-image: url({{imgUrl + 'bg-form.png'}});">
+    <view class="section">
+      <view class="section__title">姓名：</view>
+      <input name="name" value="{{msgData.Name}}" placeholder="请输入您的姓名" />
+    </view>
+    <view class="section">
+      <view class="section__title">性别：</view>
+      <radio-group class="sex-group" name="sex">
+        <label>
+          <radio value="1" checked="{{msgData.Sex == 1 ? true : false}}" />男</label>
+        <label style="margin-left: 30rpx;">
+          <radio value="0" checked="{{msgData.Sex == 0 ? true : false}}" />女</label>
+      </radio-group>
+    </view>
+    <view class="section">
+      <view class="section__title">电话：</view>
+      <input name="phone" value="{{msgData.PhoneNum}}" disabled="{{msgData.PhoneNum != '' && msgData.PhoneNum != mull}}" placeholder="请输入您的电话" />
+    </view>
+    <view class="section">
+      <view class="section__title">婚姻状况：</view>
+      <picker bindchange="bindPickerChange" style="width: 100%;" value="{{index}}" range-key="name" range="{{objectArray}}">
+        <view class="picker">
+          <text style='font-size: 34rpx;'>{{objectArray[index].name}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class="section">
+      <view class="section__title">身份信息</view>
+      <radio-group class="radio-group" name="identity">
+        <label wx:for="{{identityList}}" wx:key="{{index + 2.132}}">
+          <radio value="{{item.id}}" checked="{{item.id == msgData.Identity}}" />{{item.name}}
+        </label>
+      </radio-group>
+    </view>
+    <view class="section ">
+      <view class="section__title ">出生日期：</view>
+      <picker mode="date" value="{{date}}" start="1987-01-01" end="{{endDate}}" bindchange="bindDateChange" style="width: 100%;">
+        <view class="picker">
+          <text style="font-size: 32rpx;">{{date}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class="section ">
+      <view class="section__title ">现居地址：</view>
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}" style="width: 100%;">
+        <view class="picker">
+          <text style="font-size: 32rpx;">{{region[0]}}，{{region[1]}}，{{region[2]}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class="section">
+      <view class="section__title">详细地址：</view>
+      <input name="Address" value="{{msgData.Address}}" placeholder="请输填写详细地址" />
+    </view>
+    <view class="section ">
+      <view class="section__title ">户籍地址：</view>
+      <picker mode="region" bindchange="bindRegisterChange" value="{{register}}" custom-item="{{registerItem}}" style="width: 100%;">
+        <view class="picker">
+          <text style="font-size: 32rpx;">{{register[0]}}，{{register[1]}}，{{register[2]}}</text>
+        </view>
+      </picker>
+    </view>
+    <view class="section ">
+      <view class="section__title ">其他说明：</view>
+      <textarea name="remarks" style='height: 130px;' value="{{msgData.Remarks}}" placeholder="如果有其他说明请在此填写 " />
+    </view>
+    <view class="btn-area">
+      <button formType="reset" style=" background-color:#E6A23C; color: #FFF; margin-bottom: 20rpx;">重置</button>
+      <button formType="submit" style="background-color:#67C23A; color: #FFF;">提交</button>
+    </view>
+  </form>
+</view>

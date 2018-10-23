@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="about-box">
+    <view class="about_title">
+      <text>情牵两岸，服务为先</text>
+    </view>
+    <view class="about_content">
+      <image src="{{imgUrl + 'logo.png'}}"></image>
+      <text> 海峡两岸婚姻家庭服务中心是民政部直属事业单位，也是大陆第一家专门服务于两岸婚姻家庭的机构。</text>
+      <text> 主要任务是：开展海峡两岸婚姻家庭交流合作，建立有效沟通联系渠道，搭建交流沟通平台；受理海峡两岸婚姻家庭当事人咨询、呼吁和投诉，协助协调相关部门解决合理诉求，维护当事人合法权益；组织开展海峡两岸婚姻当事人婚姻家庭辅导，提高两岸婚姻及家庭生活质量；开展海峡两岸婚姻家庭政策理论研究和政策宣传，受委托指导地方服务机构开展工作。</text>
+    </view>
+    <view class="about_title">
+      <text>联系我们</text>
+    </view>
+    <view class="about_content contact_box">
+      <text style="font-size: 36rpx;">热线电话：010-84084779</text>
+      <text>地址：北京市西城区广安门南街48号中彩大厦9层</text>
+      <text>邮箱：zxzixunfuwu@163.com</text>
+      <text>QQ群：250670235</text>
+    </view>
+    <view class="about_map">
+      <map id="map" longitude="116.3509010000" latitude="39.8761810000" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" show-location style="width: 100%; height: 300px;"></map>
+    </view>
+  </view>
+</view>

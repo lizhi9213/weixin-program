@@ -1,0 +1,72 @@
+/* pages/main/problems.wxss */
+
+.problems_ul {
+  padding: 0 30rpx;
+  padding-bottom: 50rpx;
+}
+
+.problems_ul .problems_li {
+  margin-top: 30rpx;
+  padding-bottom: 80rpx;
+  border-bottom: 1rpx solid rgb(238, 238, 238);
+}
+
+.problems_ul .problems_li .li_h3 {
+  font-size: 34rpx;
+  color: rgb(51, 51, 51);
+  font-weight: 600;
+  margin-bottom: 24rpx;
+  font-family: 'Microsolf YaHei';
+}
+
+.problems_ul .problems_li .li_content {
+  font-size: 30rpx;
+  color: rgb(53, 53, 53);
+  font-family: 'Microsolf YaHei';
+}
+
+.problems_ul .problems_li .li_label {
+  float: left;
+  margin-top: 18rpx;
+  font-size: 20rpx;
+  font-family: 'Microsolf YaHei';
+  padding: 2rpx 8rpx;
+  border-radius: 6rpx;
+}
+
+.problems_ul .problems_li .li_label.label_clolor1 {
+  color: rgb(238, 121, 141);
+  border: 1rpx solid rgb(238, 121, 141);
+}
+
+.problems_ul .problems_li .li_label.label_clolor2 {
+  color: rgb(74, 204, 211);
+  border: 1rpx solid rgb(74, 204, 211);
+}
+
+.problems_ul .problems_li .li_label.label_clolor3 {
+  color: rgb(239, 142, 239);
+  border: 1rpx solid rgb(239, 142, 239);
+}
+
+.problems_ul .problems_li .li_label.label_clolor4 {
+  color: rgb(193, 137, 226);
+  border: 1rpx solid rgb(193, 137, 226);
+}
+
+.problems_ul .problems_li .li_label.label_clolor5 {
+  color: rgb(123, 152, 220);
+  border: 1rpx solid rgb(123, 152, 220);
+}
+
+.problems_ul .problems_li .li_label.label_clolor6 {
+  color: rgb(98, 209, 172);
+  border: 1rpx solid rgb(98, 209, 172);
+}
+
+.problems_ul .problems_li  .li_date {
+  float: right;
+  margin-top: 18rpx;
+  font-size: 20rpx;
+  color: rgb(149, 149, 149);
+}

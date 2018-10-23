@@ -1,0 +1,27 @@
+/* pages/probdetail/probdetail.wxss */
+
+.detail_content {
+  padding: 30rpx 30rpx;
+  margin-bottom: 20rpx;
+}
+
+.detail_content .detail_h2 {
+  font-size: 34rpx;
+  color: rgb(51, 51, 51);
+  font-weight: 600;
+  font-family: 'Microsolf YaHei';
+  margin-bottom: 17rpx;
+}
+
+.detail_content .detail_h4 {
+  font-size: 24rpx;
+  color: rgb(149, 149,149);
+  font-family: 'Microsolf YaHei';
+  margin-bottom: 25rpx;
+}
+
+.detail_content .detail_body {
+  font-size: 28rpx;
+  color: rgb(53, 53,53);
+  font-family: 'Microsolf YaHei';
+}

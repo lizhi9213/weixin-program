@@ -1,0 +1,183 @@
+.banner {
+  width: 100%;
+  height: 400rpx;
+  box-sizing: border-box;
+  /* padding: 0 20rpx; */
+  overflow: hidden;
+}
+
+.banner image {
+  width: 100%;
+  height: 100%;
+}
+
+.welcom {
+  background-color: #fff;
+  font-size: 34rpx;
+  width: 100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  line-height: 100rpx;
+}
+
+.welcom image {
+  width: 42rpx;
+  height: 42rpx;
+  margin-left: 20rpx;
+  margin-bottom: 10rpx;
+  margin-right: 20rpx;
+  vertical-align: middle;
+}
+
+.menus {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+/* 九宫格样式 */
+
+.weui-grids {
+  position: relative;
+  overflow: hidden;
+}
+
+.weui-grids:before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 1px;
+  /* border-top: 1px solid #d9d9d9; */
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.weui-grids:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  /* border-left: 1px solid #d9d9d9; */
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+
+.weui-grid {
+  position: relative;
+  float: left;
+  width: 33.33333333%;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.info_button {
+  background-color: #fff;
+  padding: 20px 10px;
+}
+
+.info_button::after {
+  border: none;
+  background-color: transparent;
+}
+
+.weui-grid:before {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1px;
+  bottom: 0;
+  /* border-right: 1px solid #d9d9d9; */
+  color: #d9d9d9;
+  -webkit-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: scaleX(0.5);
+  transform: scaleX(0.5);
+}
+
+.weui-grid:after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 1px;
+  /* border-bottom: 1px solid #d9d9d9; */
+  color: #d9d9d9;
+  -webkit-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+}
+
+.weui-grid:active {
+  background-color: #ececec;
+}
+
+.weui-grid__bg {
+  position: relative;
+  float: left;
+  padding: 0px 0px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.weui-grid__icon {
+  width: 120rpx;
+  height: 120rpx;
+  margin: 0 auto;
+}
+
+.weui-grid__icon image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.weui-grid__icon + .weui-grid__label {
+  margin-top: 8px;
+}
+
+.weui-grid__label {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  color: #858585;
+  font-size: 24rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* 九宫格样式 */
+
+.footer {
+  font-size: 26rpx;
+  color: #a757a8;
+  border-top: 1px solid #ccc;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 70rpx;
+  text-align: center;
+  position: relative;
+}
+
+.footer >text {
+  width: 260rpx;
+  position: absolute;
+  top: -18rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f8f6f7;
+}

@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="wisdom_banner" style="background-image: url({{imgUrl}});"></view>
+  <button class="wisdom_item" hover-class="none" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo">
+    <image class="img_aside font_img" src="../../static/img/server002.png"></image>
+    <view class="item_main">
+      <text>在线留言</text>
+      <text>留下您的意见我们提供更好的服务</text>
+    </view>
+  </button>
+
+  <button class="wisdom_item" open-type="contact" session-from="weapp">
+    <image class="img_aside font_img" src="../../static/img/server001.png"></image>
+    <view class="item_main">
+      <text>在线对话</text>
+      <text>我们用心倾听您的声音</text>
+    </view>
+  </button>
+  <button class="wisdom_item" bindtap="calling" style="margin-bottom: 20rpx;">
+    <image class="img_aside font_img" src="../../static/img/server003.png"></image>
+    <view class="item_main">
+      <text>服务热线</text>
+      <text>很高兴为您服务</text>
+    </view>
+  </button>
+</view>
+
+<!-- 引入图片预加载组件 -->
+<import src="../../img-loader/img-loader.wxml" />
+<template is="img-loader" data="{{ imgLoadList }}"></template>

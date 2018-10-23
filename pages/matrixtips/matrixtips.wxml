@@ -1,0 +1,22 @@
+<!--index.wxml-->
+<view class="container container-box">
+  <view class="tips">
+    <view class="tips_title">
+      <text>温馨提示</text>
+    </view>
+    <view class="tips_content">
+      <text>由于微信小程序不支持识别图中二维码功能，请按照以下步骤进行操作：</text>
+      <text>1、点击下方二维码进行预览，并长按二维码图片</text>
+      <text>2、选择发送给朋友或者保存图片后，您需要点击小程序右上方的圆圈图标退出小程序</text>
+      <text>3、在微信聊天界面识别您发送给朋友的二维码图片或者识别您保存的图片即可</text>
+    </view>
+  </view>
+  <view class="img-box">
+    <image bindtap="previewImg" mode="scaleToFill" src="{{imagePath}}"></image>
+  </view>
+</view>
+<!-- canvas画图 -->
+<view hidden="{{maskHidden}}" class="mask"></view>
+<view class="canvas-box">
+  <canvas hidden="{{canvasHidden}}" style="width: 686rpx;height: 686rpx;background:#f1f1f1;" canvas-id="mycanvas" />
+</view>

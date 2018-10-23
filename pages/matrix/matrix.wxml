@@ -1,0 +1,17 @@
+<!--index.wxml-->
+<view class="container container-box">
+  <view class="menus">
+    <view class="weui-grids">
+      <view class="weui-grid" wx:for="{{routers}}" wx:key="{{index+2}}">
+        <view bindtap="hrefPublic" data-href="{{item.MtxUrl}}">
+          <view class='weui-grid__bg'>
+            <view class="weui-grid__icon">
+              <image src=" {{item.MtxPic}}" mode="scaleToFill" />
+            </view>
+            <text class="weui-grid__label">{{item.MtxName}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

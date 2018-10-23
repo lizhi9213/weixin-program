@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='swiper-box'>
+    <swiper class='swiper' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" circular="{{circular}}" bindchange='swiperChange' current="{{swiperCurrent}}">
+      <block wx:for="{{movies}}" wx:key="{{index+2.14}}">
+        <swiper-item>
+          <!-- 缩略图 -->
+          <image wx:if="{{ !item.loaded }}" class='image' src="{{ item.minImg}}" bindtap="swipclick" class="slide-image" />
+          <!-- 原图 -->
+          <image wx:if="{{ item.loaded }}" class='image' src="{{ item.oriImg}}" bindtap="swipclick" class="slide-image" />
+          <button class="item-button" data-url="{{item.href}}" bindtap='hrefTo'>立即报名</button>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view wx:if="{{movies.lenghth > 1}}" class='prev' data-dir="1" bindtap="swiperClick">
+      <image src="{{imgUrl + 'right.png'}}"></image>
+    </view>
+    <view wx:if="{{movies.lenghth > 1}}" class='next' data-dir="2" bindtap="swiperClick">
+      <image src="{{imgUrl + 'left.png'}}"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 引入图片预加载组件 -->
+<import src="../../img-loader/img-loader.wxml" />
+<template is="img-loader" data="{{ imgLoadList }}"></template>

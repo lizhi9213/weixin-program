@@ -1,0 +1,104 @@
+.user_card {
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+}
+
+.user_card .card-head {
+  width: 160%;
+  height: 300rpx;
+  background-color: #fcd5fc;
+  border-radius: 50%;
+  position: absolute;
+  top: -140rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.user_card .user_photo {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  border: 2rpx solid #fff;
+  position: absolute;
+  top: 80rpx;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.user_card .user_name {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-top: 230rpx;
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+  overflow: hidden;
+}
+
+.user_card .edit_button {
+  position: absolute;
+  top: 226rpx;
+  right: 40rpx;
+  font-size: 26rpx;
+  z-index: 4;
+  border: 1px solid #ccc;
+  border-radius: 6rpx;
+  padding: 6rpx 12rpx;
+}
+
+.user-list {
+  margin-top: 320rpx;
+  width: 100%;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding-bottom: 40rpx;
+}
+
+.user-list .list-item {
+  display: flex;
+  height: 96rpx;
+  overflow: hidden;
+}
+
+.user-list .list-item .item-icon {
+  width: 260rpx;
+  height: 92rpx;
+  font-size: 32rpx;
+  line-height: 112rpx;
+  text-align: right;
+}
+
+.user-list .list-item .item-text {
+  width: 100%;
+  line-height: 112rpx;
+  font-size: 32rpx;
+  margin-left: 24rpx;
+  border-bottom: 1px solid #e4e3e6;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30rpx;
+}
+
+.user-list .list-item .item-era {
+  width: 100%;
+  padding-top: 26rpx;
+  line-height: 50rpx;
+  font-size: 32rpx;
+  margin-left: 24rpx;
+  overflow: hidden;
+  display: block;
+  padding-right: 16rpx;
+  padding-left: 30rpx;
+}
+
+.user-list .list-item .item-text >image {
+  display: inline-block;
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 34rpx;
+  margin-left: 10rpx;
+}

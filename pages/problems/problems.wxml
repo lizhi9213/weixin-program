@@ -1,0 +1,11 @@
+<!--problems.wxml-->
+<view class="container">
+  <view class='problems_ul'>
+    <view class='problems_li' wx:for="{{newsList}}" wx:key="index" data-id="{{item.id}}" bindtap="butonHref">
+      <view class='li_h3'>{{item.title}}</view>
+      <view class='li_content'>{{item.texts}}</view>
+      <text class="li_label {{'label_clolor' + item.ptype}}">{{item.ptext}}</text>
+      <text class='li_date'>{{item.date}}</text>
+    </view>
+  </view>
+</view>

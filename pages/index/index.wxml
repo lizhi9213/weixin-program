@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+  <import src="../../component/toastYh/toastYh.wxml" />
+  <template is="toast" data="{{ ..._toast_ }}" />
+  <view class="banner">
+    <image src="{{imgUrl}}"></image>
+  </view>
+  <view class="welcom">
+    <image src="/static/img/welcome.png"></image>
+    欢迎使用两岸婚姻家庭云智慧服务平台
+  </view>
+  <view class="menus">
+    <view class="weui-grids">
+      <view class="weui-grid" wx:for="{{routers}}" wx:key="name">
+        <button wx:if="{{item.code != '01'}}" class="info_button" hover-class="none" bindtap="butonHref" data-url="{{item.url+'?name='+item.name}}">
+          <view class='weui-grid__bg'>
+            <view class="weui-grid__icon">
+              <image src=" {{imgApi + item.icon}}" mode="scaleToFill" />
+            </view>
+            <text class="weui-grid__label">{{item.name}}</text>
+          </view>
+        </button>
+        <button wx:else class="info_button" hover-class="none" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" data-url="{{item.url+'?name='+item.name}}">
+          <view class='weui-grid__bg'>
+            <view class="weui-grid__icon">
+              <image src=" {{imgApi + item.icon}}" mode="scaleToFill" />
+            </view>
+            <text class="weui-grid__label">{{item.name}}</text>
+          </view>
+        </button>
+      </view>
+    </view>
+  </view>
+  <view class="footer">
+    <text>情牵两岸 · 服务为先</text>
+  </view>
+</view>
+
+<!-- 引入图片预加载组件 -->
+<import src="../../img-loader/img-loader.wxml" />
+<template is="img-loader" data="{{ imgLoadList }}"></template>

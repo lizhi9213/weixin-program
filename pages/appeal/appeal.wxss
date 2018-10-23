@@ -1,0 +1,66 @@
+
+.appeal-form {
+  width: 98%;
+  margin: 0 auto;
+  background-size: 100% 100%;
+  box-sizing: border-box;
+  padding: 48rpx 54rpx;
+}
+
+.appeal-form .section {
+  padding: 21rpx 16rpx;
+  border-bottom: 1rpx solid #e3e3e3;
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.section .section__title {
+  width: 24%;
+  line-height: 52rpx;
+  height: 52rpx;
+  flex-shrink: 0;
+  font-size: 34rpx;
+}
+
+.section input, .section .switch, .section checkbox-group {
+  height: 22rpx;
+  line-height: 22rpx;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  width: 100%;
+  display: block;
+  padding: 0px;
+  font-size: 34rpx;
+}
+
+.section input::-webkit-input-placeholder {
+  font-size: 34rpx;
+}
+
+.section textarea {
+  padding-top: 9rpx;
+  padding: 6rpx;
+}
+
+.section .radio-group {
+  padding-top: 8rpx;
+}
+
+.section textarea::-webkit-input-placeholder {
+  font-size: 34rpx !important;
+}
+
+.section .radio-group label {
+  display: block;
+  margin-bottom: 14rpx;
+  font-size: 34rpx;
+}
+
+.btn-area {
+  margin-bottom: 30rpx;
+  margin-top: 20rpx;
+}

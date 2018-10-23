@@ -1,0 +1,70 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="user_card">
+    <view class="card-head">
+    </view>
+    <image class="user_photo" src="{{msgData.ImgAddr}}"></image>
+    <text class='user_name'> {{msgData.Name}}</text>
+    <text class="edit_button" bindtap="bindEdit">编辑</text>
+  </view>
+  <view class="user-list">
+    <view class="list-item">
+      <view class="item-icon">
+        性别：
+      </view>
+      <view class="item-text">
+        <image wx:if="{{msgData.Sex == 0 || msgData.Sex == 2}}" src="/static/img/female.png"></image>
+        <image wx:if="{{msgData.Sex == 1}}" src="/static/img/male.png"></image>
+      </view>
+    </view>
+    <view class="list-item">
+      <view class="item-icon">
+        <!-- <image src="{{imgUrl + 'right.png'}}"></image> -->
+        电话：
+      </view>
+      <view class="item-text"> {{msgData.PhoneNum == "" || msgData.PhoneNum == null ? "无" : msgData.PhoneNum}} </view>
+    </view>
+    <view class="list-item">
+      <view class="item-icon">
+        婚姻：
+      </view>
+      <view class="item-text"> {{marital}} </view>
+    </view>
+    <view class="list-item">
+      <view class="item-icon">
+        身份：
+      </view>
+      <view class="item-text"> {{msgData.Identity == 1 ? "大陆配偶" : (msgData.Identity == 2 ? "台湾配偶" : "其他")}} </view>
+    </view>
+    <view class="list-item">
+      <view class="item-icon">
+        出生日期：
+      </view>
+      <view class="item-text"> {{msgData.Birthday == "" || msgData.Birthday == null ? "无" : msgData.Birthday}} </view>
+    </view>
+    <view class="list-item">
+      <view class="item-icon">
+        现居地：
+      </view>
+      <view class="item-text"> {{register}} </view>
+    </view>
+    <view class="list-item">
+      <view class="item-icon">
+        详细地址：
+      </view>
+      <view class="item-text"> {{msgData.Address == "" || msgData.Address == null ? "无" : msgData.Address}} </view>
+    </view>
+    <view class="list-item">
+      <view class="item-icon">
+        户籍地：
+      </view>
+      <view class="item-text"> {{living}} </view>
+    </view>
+    <view class="list-item" style="height:auto;">
+      <view class="item-icon">
+        其他说明：
+      </view>
+      <view class="item-era" style="white-space: pre-wrap;"> {{msgData.Remarks == "" || msgData.Remarks == null ? "无" : msgData.Remarks}} </view>
+    </view>
+  </view>
+</view>

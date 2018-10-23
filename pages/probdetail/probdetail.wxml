@@ -1,0 +1,8 @@
+<!--pages/probdetail/probdetail.wxml-->
+<view class="container">
+  <view class='detail_content'>
+    <view class='detail_h2'>{{nowNews.title}}</view>
+    <view class='detail_h4'><text style='margin-right:18rpx;'>{{'来源：'+nowNews.sourse}}</text>{{'时间：'+ nowNews.date}}</view>
+    <view><text class='detail_body'>{{nowNews.texts}}</text></view>
+  </view>
+</view>
